@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Leitor de JSON</title>
+    <script 
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+    </script>
+ 
+<script>
+$(document).ready(function() {
+    $.getJSON('gerar_json.php', function(lista) {
+        for (index=0; index < lista.length; index++) {
+            var objeto = lista[index];
+            alert('Nome: ' + objeto.nome + ' - Idade: ' + objeto.idade);
+            if (console) {
+               console.log(lista[index])
+            }
+        }
+    });
+});
+</script>
+</head>
+<body></body>
+</html>
